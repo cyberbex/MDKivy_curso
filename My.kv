@@ -1,24 +1,29 @@
 MI:
 <MI>:
     orientation: "vertical"
-    MDTopAppBar:    
+    MDTopAppBar:
+        id: toolbar    
         title: "My App"
         md_bg_color: app.theme_cls.primary_dark
         left_action_items:[["menu"]]
         right_action_items:[["clock"]]
-    MDLabel:
+        pos_hint:{"top":1}
+    MDBanner:
+        id: banner
+        text: ["this is may banner"]
+        over_widget: container
+        left_action: ["cancel",lambda x:root.lefter(self)]
+        right_action:["close",lambda x:root.righter(self)]
+    MDBoxLayout:
+        orientation:"vertical"
+        id:container
+        size_hint_y:None
+        height:Window.height-toolbar.height
+    MDRaisedButton:
+        text:"Click"
+        pos:200,100
+        on_release:banner.show()    
 
-    MDTextField:
-        hint_text: "Hit Text"
-        helper_text: "Just enter Only 7 caracters"
-        helper_text_mode: "on_error"
-        max_text_length: 7
-        mode: "rectangle"
-    MDTextField:
-        icon_left:"email"
-        hint_text:"Email Here"
-        normal_color:"app.theme_cls.primary_light"
-        mode:"round"     
     MDBottomAppBar:
         md_bg_color: app.theme_cls.primary_light
         MDTopAppBar:
