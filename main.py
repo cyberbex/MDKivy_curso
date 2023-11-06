@@ -19,7 +19,7 @@ class MyApp(MDApp):
         self.theme_cls.primary_palette="Amber"
         self.theme_cls.theme_style= "Dark"
         return 0
-
+    
 
 MyApp().run()
 
