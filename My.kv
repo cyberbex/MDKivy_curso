@@ -8,21 +8,25 @@ MI:
         left_action_items:[["menu"]]
         right_action_items:[["clock"]]
         pos_hint:{"top":1}
-   
-   
-    MDBottomNavigation:
-        panel_color: app.theme_cls.accent_dark
-        MDBottomNavigationItem:
-            name:"Screem 1"
-            icon:"android"
-            text:"Android"
-            MDLabel:
-                text:"this is my screen 1htyhr"
-                pos_hint:{"center_x":.5, "center_y":.5}
-        MDBottomNavigationItem:
-            name:"Screem 2"
-            icon:"leaf"
-            text:"Leaf"
-            MDLabel:
-                text:"this is my screen 2"
-                pos_hint:{"center_x":.5, "center_y":.5}
+  
+
+    MDBoxLayout:
+        orientation:"vertical"
+        id:container
+        size_hint_y:None
+        size_hint: .8, .2
+        pos_hint:{"center_x":.5,"top":.8}
+        MDTextField:
+            id: password
+            hint_text: "password"
+    MDRaisedButton:
+        text:"Click"
+        pos:200,100   
+        on_release:app.maker()
+
+    MDLabel:
+        id:preco
+        text:"qualquer coisa"
+        
+    MDBottomAppBar:
+        md_bg_color: app.theme_cls.primary_light
