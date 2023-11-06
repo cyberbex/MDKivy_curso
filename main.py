@@ -11,6 +11,10 @@ class MI(Screen):
         print("Right pressed",Instance.text)
 
 class MyApp(MDApp):
+
+    def maker(self):
+        password = self.root.ids.password.text
+        print(password)
     def build(self):
         self.theme_cls.primary_palette="Amber"
         self.theme_cls.theme_style= "Dark"
