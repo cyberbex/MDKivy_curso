@@ -10,46 +10,19 @@ MI:
         pos_hint:{"top":1}
    
    
-    ScrollView:
-        pos_hint: {"top":.9}
-        size_hint_y: None
-        height:300
-        MDList:
-            OneLineListItem:
-                text:"its my list"
-            TwoLineAvatarListItem:
-                text: "this is my primary text"
-                secondary_text: "this is my secondary list"
-                ImageLeftWidget:
-                    source: "home.png"
-            ThreeLineIconListItem:
-                text: "this is my primary text"
-                secondary_text: "esese pa e bola"
-                tertiary_text:"eselkjlkjsdlkfjsdlkj"
-                IconLeftWidget:
-                    icon:"android"        
-
-            OneLineListItem:
-                text:"its my list"
-            TwoLineAvatarListItem:
-                text: "this is my primary text"
-                secondary_text: "this is my secondary list"
-                ImageLeftWidget:
-                    source: "home.png"
-            ThreeLineIconListItem:
-                text: "this is my primary text"
-                secondary_text: "esese pa e bola"
-                tertiary_text:"eselkjlkjsdlkfjsdlkj"
-                IconLeftWidget:
-                    icon:"android"   
-         
-
-    MDBottomAppBar:
-        md_bg_color: app.theme_cls.primary_light
-        MDTopAppBar:
-            type: "bottom"
-            title: "Bottom"
-            icon: "android"
-            mode: "end" 
-            
-
+    MDBottomNavigation:
+        panel_color: app.theme_cls.accent_dark
+        MDBottomNavigationItem:
+            name:"Screem 1"
+            icon:"android"
+            text:"Android"
+            MDLabel:
+                text:"this is my screen 1htyhr"
+                pos_hint:{"center_x":.5, "center_y":.5}
+        MDBottomNavigationItem:
+            name:"Screem 2"
+            icon:"leaf"
+            text:"Leaf"
+            MDLabel:
+                text:"this is my screen 2"
+                pos_hint:{"center_x":.5, "center_y":.5}
